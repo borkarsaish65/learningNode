@@ -54,7 +54,6 @@ const readNotes = title =>
      else
      {
          console.log(chalk.red.inverse('Note not found'));
-         console.log("Enter a note first");
      }
 }
 
