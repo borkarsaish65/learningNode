@@ -62,6 +62,7 @@ return JSON.parse(dataJson);
 
 }
 
+console.log('Update to Github');
 
 module.exports = {
 getNotes : getNotes,
