@@ -27,7 +27,7 @@ else
 
 //List note function
 
-const listNotes = function () 
+const listNotes = () => 
 {
    const notes = loadNotes();
    console.log(chalk.yellow.inverse('Your Notes'));
@@ -37,7 +37,7 @@ const listNotes = function ()
    })
 }
 
-const readNotes = function(title)
+const readNotes = title =>
 {      
     const notes = loadNotes();
     console.log(chalk.red.inverse('Your Note says..'));
