@@ -25,6 +25,32 @@ else
 
 }
 
+//List note function
+
+const listNotes = function () 
+{
+   const notes = loadNotes();
+   console.log(chalk.yellow.inverse('Your Notes'));
+
+   notes.forEach(note => {
+       console.log(note.title);
+   })
+}
+
+const readNotes = function(title)
+{      
+    const notes = loadNotes();
+    console.log(chalk.red.inverse('Your Note says..'));
+     notes.forEach(note => {
+        if(note.title == title)
+        {
+            console.log(note.body);
+        }
+        
+})
+}
+
+
 
 // removeNote function 
 const removeNote = title => {
@@ -62,10 +88,10 @@ return JSON.parse(dataJson);
 
 }
 
-console.log('Update to Github');
-
 module.exports = {
 getNotes : getNotes,
 addNote : addnote,
-removeNote:removeNote
+removeNote:removeNote,
+listNotes:listNotes,
+readNotes:readNotes
 };
